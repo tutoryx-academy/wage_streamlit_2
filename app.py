@@ -46,4 +46,5 @@ else:
         currency_dictionary = currency_rates(df_rate)
         df['leke_rate']=df['existing_rate'].map(currency_dictionary)
         df['Wage_leke'] = df['Wage']*df['leke_rate']
+        #TODO: Drop unnecesary columns
         st.dataframe(df)
